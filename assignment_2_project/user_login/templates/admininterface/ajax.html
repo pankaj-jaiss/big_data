@@ -1,0 +1,38 @@
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+     $("#test_db_button").click(function () {          
+    console.log("Test Connection  Button is Clicked");
+    // output = "";
+    // let sid = $("#stuid").val();
+    let db_source = $("#db_source").val();
+    let db_user = $("#db_user").val();
+    let db_passwd = $("#db_passwd").val();
+    let db_host = $("#db_host").val();
+    let db_port = $("#db_port").val();
+    let db_service_name = $("#db_service_name").val(); 
+    let db_destination = $("$db_user2").val()
+    let csrf_token = $("input[name=csrfmiddlewaretoken").val();
+   
+      data = {
+        db_source: db_source,
+        pasdb_passwdswd: db_passwd,
+        db_host: db_host,
+        db_user: db_user,
+        db_port:db_port,  
+        db_service_name:db_service_name,
+        destination:db_destination,
+        token: csrf_token,
+      };
+      $.ajax({
+        url: "{% url 'test_connection' %}",
+        method: "POST",
+        data: data,
+        dataType: "json",
+        success: function (data) { 
+          // console.log(data);
+          x = data.msg
+          console.log(x);
+        }
+       });
+    });
+    </script> 

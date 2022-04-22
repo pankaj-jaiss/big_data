@@ -1,0 +1,287 @@
+{% extends 'admininterface/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--**********************************
+        Content body start
+    ***********************************-->
+<div id='main_div' class="content-body">
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4>Resource Migration</h4>
+                    <p class="mb-0">Data Migration from Legacy Database to BigData</p>
+                </div>
+            </div>
+            <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                <ol class="breadcrumb">
+
+                </ol>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="row dashbaordMain">
+                
+            </div> -->
+
+        <div class="container" role="document">
+            <div class="modal-content">
+                <form id="db_form" action="" method="post">
+                    {% csrf_token %}
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Migration Window</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="db_source" name="db_source">Source Database</label>
+                                    <input id="db_source" class="form-control" type="text" name="db_source"
+                                        list="source_db_list">
+                                    <datalist id="source_db_list">
+                                        <option value="Oracle">
+                                        <option value="MySQL">
+                                    </datalist>
+                                </div>
+                                <div class="form-group">
+                                    <label for="db_user" name="db_user">User / Schema</label>
+                                    <input id="db_user" class="form-control" type="text" name="db_user">
+                                </div>
+                                <div class="form-group">
+                                    <label for="db_passwd" name="db_passwd">Password</label>
+                                    <input id="db_passwd" class="form-control" type="password" placeholder="Password"
+                                        name="db_passwd" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="db_host" name="db_host">Host</label>
+                                    <input id="db_host" class="form-control" type="text" name="db_host" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="db_port" name="db_port">Port</label>
+                                    <input id="db_port" class="form-control" type="number" name="db_port" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="db_service_name" name="db_service_name">Service Name</label>
+                                    <input id="db_service_name" class="form-control" type="text" name="db_service_name"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="db_destination" name="db_destination">Destination Database</label>
+                                    <input id="db_destination-id" class="form-control" type="text" name="db_destination"
+                                        value="xe" disabled>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <input value="Test Connection" type="button" id="test_db_button" class="btn btn-secondary" > -->
+
+                        <!-- Button trigger modal -->
+                        <input type="button" id="test_db_button" class="btn btn-secondary" data-toggle="modal"
+                            data-target="#exampleModal" value=" Test Connection">
+                        <!-- </input> -->
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <style>
+                                            #paragraph-body-id {
+                                                background-color: grey;
+                                                color: white;
+                                            }
+                                        </style>
+                                        <p id="paragraph-body-id"> ' ' </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <a type="button" href=""> <input type="submit" class="btn btn-primary" id="next-id" value="Next"
+                                data-sid=""></input></a> -->
+                        <input type="submit" class="btn btn-primary" id="next-id" value="Next" data-sid="">
+                    </input>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- sub moadal -->
+
+        <!-- Modal -ad-subadmin ----->
+
+        <!-- Modal -ad-subadmin -ends---->
+
+        <!-- submodal end -->
+
+        <!--**********************************
+        Content body end
+    ***********************************-->
+
+        {% endblock %}
+
+        {% block scripts %}
+
+        <script src="user_login\static\js\jquery.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#test_db_button').click(function () {
+                    // alert('TEST 1 clicked');
+                    let clicked = "test_button";
+                    let db_source = $("#db_source").val();
+                    let db_user = $("#db_user").val();
+                    let db_passwd = $("#db_passwd").val();
+                    let db_host = $("#db_host").val();
+                    let db_port = $("#db_port").val();
+                    let db_service_name = $("#db_service_name").val();
+                    let db_destination = $("#db_destination-id").val();
+                    let csr = $("input[name=csrfmiddlewaretoken").val();
+                    form_data = {
+                        source: db_source,
+                        passwd: db_passwd,
+                        host: db_host,
+                        user: db_user,
+                        port: db_port,
+                        service_name: db_service_name,
+                        destination: db_destination,
+                        csrfmiddlewaretoken: csr,
+                        clicked: clicked
+                    };
+                    $.ajax({
+                        url: "{% url 'test_connection' %}",
+                        method: "POST",
+                        data: form_data,
+                        // data:$('#db_form').serialize(),
+                        dataType: "json",
+                        success: function (data) {
+                            // console.log(data);
+                            x = data.popup_msg
+                            // console.log(x)
+                            $("#paragraph-body-id").text(x);
+
+                            if (x === "Provided credential is not correct") {
+                                $(':input[type="submit"]').prop('disabled', true);
+
+                            }
+                            else {
+                                $(':input[type="submit"]').prop('disabled', false);
+
+                            }
+                        }
+                    });
+                });
+            });
+
+            $('#next-id').click(function () {
+                // alert('Next 2 button is  clicked');
+                let clicked = "next_button";
+                let db_source = $("#db_source").val();
+                let db_user = $("#db_user").val();
+                let db_passwd = $("#db_passwd").val();
+                let db_host = $("#db_host").val();
+                let db_port = $("#db_port").val();
+                let db_service_name = $("#db_service_name").val();
+                let db_destination = $("#db_destination-id").val();
+                let csr = $("input[name=csrfmiddlewaretoken").val();
+                form_data = {
+                    source: db_source,
+                    passwd: db_passwd,
+                    host: db_host,
+                    user: db_user,
+                    port: db_port,
+                    service_name: db_service_name,
+                    destination: db_destination,
+                    csrfmiddlewaretoken: csr,
+                    clicked: clicked
+                };
+                $.ajax({
+                    url: "{% url 'migration2' %}",
+                    method: "POST",
+                    data: form_data,
+                    dataType: "json",
+                    success: function () {
+                        // console.log(data);
+                        // x = data.popup_msg
+                        $("#paragraph-body-id").text("Your connection is ready ...");
+                        let x = $("#paragraph-body-id").val();
+                        console.log('migration2 view is called ...')
+                    }
+                });
+            });
+
+        </script>
+        <!-- // });
+
+    //  $("#test_db_button").click(function () {          
+    // console.log("Test Connection  Button is Clicked");
+    // output = "";
+    // let sid = $("#stuid").val();
+     -->
+
+        //
+        <!-- <script>
+    //      // next button 
+    // $("#next-id").click(function() {
+    //         // $('#next-id').attr("data-sid", "clicked");
+    //     console.log('next button is clicked ...')
+    //     let db_source = $("#db_source").val();
+    //     let db_user = $("#db_user").val();
+    //     let db_passwd = $("#db_passwd").val();
+    //     let db_host = $("#db_host").val();
+    //     let db_port = $("#db_port").val();
+    //     let db_service_name = $("#db_service_name").val(); 
+    //     let db_destination = $("#db_destination-id").val();
+    //     let csr = $("input[name=csrfmiddlewaretoken").val();
+
+    
+    //     form_data = {
+    //     db_source: db_source,
+    //     db_passwd: db_passwd,
+    //     db_host: db_host,
+    //     db_user: db_user,
+    //     db_port:db_port,  
+    //     db_service_name:db_service_name,
+    //     db_destination:db_destination,
+    //     csrfmiddlewaretoken: csr,
+    //     next:"clicked" 
+    //     };
+        
+    //     $.ajax({
+    //     url: "{% url 'test_connection' %}",
+    //     method: "POST",
+    //     data: form_data,
+    //     dataType: "json",
+    //     success: function (data) { 
+    //       //console.log(data);
+    //       x = data.next 
+    //       console.log(x)
+    //     //   $("#paragraph-body-id").text(x);
+    //     }
+    //    });
+    // });
+    // </script> -->
+
+
+        {% endblock %}

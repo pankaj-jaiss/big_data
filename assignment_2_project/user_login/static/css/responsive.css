@@ -1,0 +1,77 @@
+.loginForm .btn-yellow {    background-color:#F8B140; color: #fff;}
+.loginMain{background-image: url(../images/loginbackground.png);background-repeat: no-repeat; background-size: auto;    background-position: right;}
+.loginMain h2 {color:#fff; font-size: 2.81rem;}
+.fc-yellow{color: #F8B140;}
+.loginForm .form-control {  height: calc(2em + 0.75rem + 2px);}
+.loginForm img { width: 76%;  max-width: 200px;}
+.nav-header .brand-logo img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+	max-width: 210px;
+}
+.stat-widget-one .stat-icon i {    width: 4rem;    display: flex; justify-content: center;}
+.userMangementTable  .media {  display: flex;  align-items: center;}
+
+.switchToggle input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.switchToggle label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 42px;
+	height: 20px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+.switchToggle label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.switchToggle input:checked + label {background: #4caf50;}
+.switchToggle input:checked + label:after {left: calc(100% - 5px);	transform: translateX(-100%);}
+.switchToggle label:active:after {	width: 55px;}
+.switchToggle {    display: flex;  align-items: center;}
+.switchToggle label{margin-bottom: 0;}
+.edit {    display: flex;  align-items: center;}
+.delete {    font-size: 1.2rem;    color: #ff0000;    margin: 0 .8rem;}
+.persionData {    display: flex;    align-items: center;}
+.userMangementTable {    padding-top: 1rem!important;}
+.checkuser{display: none;}
+.dashbaordMain .stat-widget-one.card-body { display: flex; flex-direction: column;justify-content: center; align-items: center; align-content: center; text-align: center;}
+.dashbaordMain .stat-content { margin-left: 0px;  margin-top: 7px;}
+.selectSubadmin {margin-bottom: 0;}
+.selectSubadmin select.form-control { border: none; min-width: 121px;}
+p.subject {  margin-bottom: 0;  min-width: 260px;display: inline-block;}
+.status { padding-left: 1.2rem;min-width: 75px;display: inline-block;padding-left: 1.2rem;}
+.statusCircle{display: inline-block;width: .5rem;height: .5rem;border-radius: 50%;margin-right: -13px;}
+.allBtn:focus { background-color: #262141; color: #fff; box-shadow: none;}
+.totaluser{display: none;}
+.reply {padding: .3rem 1rem; background-color: #262141; border-radius: 27rem;  display: inline-block; font-size: .7rem; color: #fff!important;}
+.reply:focus,.reply:active{color: #fff!important;}
+.userName {  padding: 1rem; background-color: #eadeff;  color: #000;   border-radius: 0rem 1rem 1rem; margin-top: .5rem;}
+.adminName {  padding: 1rem; background-color: #e2f2ff;  color: #000;  border-radius: 1rem 1rem 0rem; margin-top: .5rem;}
+.adminName h5{text-align: right;}
+#replyModal textarea.form-control {max-height: 51px;}
+.userMangementTable tr td {vertical-align: top; min-width: 74px;}
+/****************************************************media*queries****************************************************************/
+@media screen and (max-width: 767px){
+.loginMain{height: auto!important;}
+}
+/****************************************************media*queries*ends***********************************************************/

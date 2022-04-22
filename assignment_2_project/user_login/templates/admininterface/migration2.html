@@ -1,0 +1,208 @@
+{% extends 'admininterface/base.html' %}
+{% load static %}
+{% block css %}
+
+{% endblock %}
+{% block content %}
+
+<div class="content-body">
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4>Resource Migration</h4>
+                    <p class="mb-0">Database and Table Selection</p>
+                    <!-- {{database_names_list}} -->
+                    <!-- <input type="hidden" id="hiddenid" name="hiddenid" value="{{database_names_list}}">
+                    <input type="hidden2" id="hiddenid2" name="hiddenid2" value="{{data_dict}}"> -->
+
+                </div>
+            </div>
+            <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                <ol class="breadcrumb">
+                    
+                </ol>
+            </div>
+        </div>
+
+
+        <div class="container" role="document">
+            <div class="modal-content">
+                <form action ="" method = "POST">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="selectdb" style="display:block">Choose Databases:</label>
+                                <select style="width: 250px; border: 7px solid transparent; " name="selectdb" id="selectdb" required>
+                                    
+                                        {% for i in database_names %}
+                                            {% for j in i %}
+                                                <option style="padding-block: 5px;" value="{{j}}">{{j}}</option>
+                                            {% endfor %}
+                                        {% endfor %}
+
+                                    
+                                    </select>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="selecttables" style="display:block">Choose Tables:</label>
+                                    <select style="height: 400px; width: 310px; margin: 10px;" name="selecttables" id="selecttables" multiple required>
+                                    <!-- <select style="height: 400px; width: 310px; margin: 10px;" name="selecttables" id="selecttables" required> -->
+
+                                        <option style="padding-block: 5px;" value=""></option>
+                                    
+                                    </select>
+                                </div>
+                            </div>
+                             <div class="col-6" style="visibility: hidden;">
+                                <div class="form-group">
+                                    <label for="db_details">Enter Target Path</label>
+                                    <input id="db_details" class="form-control" type="text" value="" name="db_details">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                       
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Proceed</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- creating popup window -->
+<div id='db_confirmationModal' class="modal fade" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document"></div>
+        <div class="modal-content">
+            <form action ="" method = "POST">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>Source Details</h3>
+                            <div class="form-group">
+                                <label>DB SOURCE</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <h3>Destination Details</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Migrate</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+{%endblock%}
+
+{% block scripts %}
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+
+<!-- JQuery started from here <--------------------------- -->
+
+<script src="user_login\static\js\jquery.js"></script> 
+<!-- <script>
+    // let selectdb = $('#selectdb').find(":selected").text();
+    $('#selectdb').change(function() {
+    //Use $option (with the "$") to see that the variable is a jQuery object
+    var $option = $(this).find('option:selected');
+    //Added with the EDIT
+    var value = $option.val();//to get content of "value" attrib
+    var text = $option.text();//to get <option>Text</option> content
+    // alert(value)
+    console.log(value,text);
+    // alert(value);
+    let hiddenValue = $('#hiddenid').val()
+    let txt = "";
+    // let obj = Array.from(hiddenValue)
+    hiddenValue =hiddenValue.slice(1, -1).split(",");
+    // hiddenValue = hiddenValue.split(",");
+    hiddenValue.forEach(myFunction);
+
+    // let length =  hiddenValue.length;
+    // alert(typeof hiddenValue)
+    let hiddenValue2 = $('#hiddenid2').val()
+    //  hiddenValue2 = hiddenValue2
+    //  Object.values(hiddenValue2).forEach(myFunction);
+    // hiddenValue2='"'+hiddenValue2+'"'
+    // const obj = JSON.parse(JSON.stringify(hiddenValue2));
+    var p = {
+    "p1": "value1",
+    "p2": "value2",
+    "p3": "value3"
+};
+
+for (var key in p) {
+    if (p.hasOwnProperty(key)) {
+        // console.log(key + " -> " + p[key]);
+    }
+}
+console.log(typeof hiddenValue2);
+function myFunction(value, index, obj) {
+        // txt += value;
+        // console.log([hiddenValue[index]]);
+    }
+
+
+
+// let a= Object.keys(hiddenValue2).map((item) => console.log(item))
+
+// console.log( hiddenValue2);
+// Object.entries(obj).forEach(([key, value]) => console.log(`${value}`));
+    // console.log('['+hiddenValue2+']');
+    // let length2 =  hiddenValue2.length;
+    // alert(length2)
+    // alert(hiddenValue2)
+    html = '<option value="'+'value'+'" selected="selected">'+'text'+'</option>';
+    $('#'+'selecttables').append(html);
+    html = ' '
+    });
+    
+
+</script> -->
+<script>
+    $(document).ready(function(){
+        $('select#selectdb').change(function(){
+            var option_selected = $(this).find("option:selected");
+            var value = option_selected.val();
+            var db_name = option_selected.text();
+            console.log(db_name)
+
+            $.ajax({
+                type:'POST',
+                // url: "{% url 'all_table' %}",
+                url: "{% url 'all_table' %}",
+
+                data:({
+                    'db_selected':db_name,
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                }),
+                success:function(result){
+                    console.log(result);
+                    $('#selecttables option').remove();
+                    for (var i=result.all_tables.length-1; i >= 0; i--){
+                        $("#selecttables").append('<option style="padding-block: 5px;" val="'+result.all_tables[i]+'">'+result.all_tables[i]+'</option>');
+
+
+                    };
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,264 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&display=swap'); */
+body{  font-family: 'Roboto', sans-serif; }
+
+/* header */
+.header{
+    background-color: #F5F5F5;
+}
+.headSection{
+    background-color: #262141;
+    margin-right: 2.5rem;
+    border-bottom-right-radius: 49rem;
+    margin-bottom: 5.12rem
+}
+.gridImg{
+    position: absolute;
+    bottom: -1rem;
+    left: 8.93rem;
+    align-items: center;
+}
+.headerIcon{
+    position: relative;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 100%;
+}
+.youtube{
+    right: 0.37rem !important;
+}
+.facebookIcon{
+    right: 11px !important;
+}
+.socialMedia{
+    color: #262141;
+    right: 0.5rem;
+    position: absolute;
+    top: 0.56rem;
+}
+.headText{
+    margin-right: 1.25rem;
+    color: #fff;
+}
+.headData{
+    color: #fff;
+}
+.headData h2{
+    margin-top: 12px;
+    margin-bottom: 1.75rem;
+    font-size:3.37rem;
+    font-weight: bold;
+}
+.jvText{
+    font-size: 1.12rem;
+    color: #92e1f3;
+}
+.formBtn{
+    padding: 0.62rem 2.62rem;
+    background: #262141;
+}
+.comingSoon{
+    font-size: 1.5rem;
+    color: #F8B140;
+    font-weight: bold;
+}
+.formBtn:hover{
+    background: #262141;
+}
+.headerImg{
+    margin-bottom: 0.75rem;
+    position: relative;
+    right: -52px;
+}
+.headerImg img{
+    width: 100%;
+
+}
+.jvScanHead{
+    padding-top:13px;
+}
+/* **end head ** */
+/* sections */
+.homePage{
+    margin-top: 88px;
+}
+.slick-prev:before {
+    content: url('../images/Icon\ ionic-ios-arrow-forwardd.svg');
+  }
+  .slick-next:before {
+    content: url('../images/iconBack.svg');
+  }
+  .slider .slick-dots li button:before {
+    font-size: 0.87rem;
+  }
+.secImg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+}
+.TopIcon{
+    background-image: url(../images/Path\ 7244.svg);
+}
+.bottomIcon{
+    background-image: url(../images/Path\ 7247.svg);
+}
+.digiHeding h3{
+    font-size: 43px;
+    font-weight: bold;
+    text-align: left;
+}
+.sectionHeding h3{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: left;
+}
+.secList li{
+    font-size: 26px;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 31px;
+}
+.listIcon{
+    -webkit-box-shadow: 1px 1px 5px 2px rgba(0,0,1,0.2);
+    box-shadow: 1px 1px 5px 2px rgba(0,0,1,0.2);
+    background-image: url(../images/Icon\ feather-check-circle.svg);
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 100%;
+       background-size: 22px;
+    background-position: center;
+    min-width: 4.18rem;
+    width: 4.18rem;
+    height: 4.18rem;
+    display: inline-block;
+    margin-right: 43px;
+}
+.digiList{
+    margin-top: 1.56rem;
+}
+.digitalHealth li{
+    font-weight: 600;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0.75rem;
+    display: flex;
+}
+.tickIcon{
+    background-image: url(../images/Icon\ feather-check-circle.svg);
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: cover;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+    margin-right: 9px;
+}
+.secBackground{
+    
+    background: #F9FAFF;
+}
+.whoList li{
+    font-weight: 600;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0.75rem;
+    display: flex;
+}
+.secFive{
+    background-color: #F9FAFF;
+}
+.iconOne{
+    background-image: url(../images/Icon\ 1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 1.37rem;
+    display: inline-block;
+}
+.iconThree{
+    background-image: url(../images/Icon\ ionic-md-pulse.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.37rem;
+    display: inline-block;
+}
+.iconFour{
+    background-image: url(../images/Group\ 38669.svg);
+    background-repeat: no-repeat;
+    background-size: 1.12rem;
+    width: 2.12rem;
+    display: inline-block;
+}
+.iconTwo{
+    background-image: url(../images/Group\ 38670.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.56rem;
+    display: inline-block;
+}
+.secfive{
+    font-weight: bold;
+}
+.sliderImage{
+    width: 100%;
+}
+.digiImage{
+    width: 80%;
+}
+.whoImage{
+    width: 60%;
+}
+.diagnosisImg{
+    width: 100%;
+}
+.healthImage{
+    width: 90%;
+}
+/* ** end section ** */
+/* footer */
+.footerSec{
+    margin-top: 11.5rem;
+    background-color: #262141;
+    border-top-left-radius:100px 123px;
+}
+.footerText{
+    color: #fff;
+    margin-top: 5.25rem;
+}
+.footerText h3{
+    font-size: 2.31rem;
+    font-weight: bold;
+}
+.footerLogo{
+    margin-top: 1.81rem;
+}
+.footerLogo img{
+    width: 40%;
+}
+.footerImg{
+    position: relative;
+    top: -88px;
+    width:70%
+}
+/* **end footer ***/
+
+.ThanksHeader {   background: #262141; padding: 1.2rem 0;    text-align: center;}
+.ThanksHeader img { margin: auto; width: 95%; max-width: 157px;}
+.messageSection {    background-image: url(../images/thanksback.svg); background-size: contain; background-repeat: no-repeat;padding: 3rem 0;
+    padding-top: 4rem; background-position:  center; margin-top: 2rem;}
+section.messageSection h2 {    font-size: 50px;    font-weight: 700;  line-height: 1.6;}
+section.messageSection h3 {    font-size: 1.875rem;    font-weight: 600;  }
+section.messageSection h5 {    font-size: 1.65rem;    font-weight: 500;        margin-bottom: 1.5rem;}
+.messageSection h2,.messageSection h3{margin-bottom: 2.5rem; }
+.messageSection h2,.messageSection h3,.messageSection h5 {text-align: center;color: #262141;}
+.playstoremg {    margin-top: 4rem;    display: flex;    justify-content: center;flex-wrap: wrap;}
+.playstoremg img{width: 48%; max-width: 280px;}

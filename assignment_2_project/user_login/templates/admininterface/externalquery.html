@@ -1,0 +1,101 @@
+{% extends 'admininterface/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!--**********************************
+        Content body start
+    ***********************************-->
+    <div id='main_div' class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
+            <div class="row page-titles mx-0">
+                <div class="col-sm-6 p-md-0">
+                    <div class="welcome-text">
+                        <h4>Legacy DB Query</h4>
+                        <p class="mb-0">Query to Legacy Database</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                    <ol class="breadcrumb">
+                        
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="container" role="document">
+                <div class="modal-content">
+                    <form id="db_form" action = "" method = "POST">
+                        {% csrf_token %}
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Query Window</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="db_source" name="db_source">Source Database</label>
+                                            <input id="db_source" class="form-control" type="text" name="db_source" list="source_db_list">
+                                            <datalist id="source_db_list">
+                                                <option value="Oracle">
+                                                <option value="MySQL">
+                                            </datalist>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="db_user" name="db_user">User / Schema</label>
+                                            <input id="db_user" class="form-control" type="text" name="db_user">
+                                        </div>
+                                        <div class="form-group" >
+                                            <label for="db_passwd" name="db_passwd">Password</label>
+                                            <input id="db_passwd" class="form-control" type="password" placeholder="Password" name="db_passwd" required >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="db_host" name="db_host">Host</label>
+                                            <input id="db_host" class="form-control" type="text" name="db_host" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="db_port" name="db_port">Port</label>
+                                            <input id="db_port" class="form-control" type="number" name="db_port" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="db_service_name" name="db_service_name">Service Name</label>
+                                            <input id="db_service_name" class="form-control" type="text" name="db_service_name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="db_destination" name="db_destination">Destination Database</label>
+                                            <input id="db_user" class="form-control" type="text" name="db_destination" value="HDFS" disabled>
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+      
+            
+         
+        </div>
+
+       
+
+    </div>
+    <!--**********************************
+        Content body end
+    ***********************************-->
+    
+{% endblock %}
+
+{% block scripts %}
+<!-- <script>
+
+</script> -->
+
+    
+{% endblock %}

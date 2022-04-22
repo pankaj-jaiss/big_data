@@ -1,0 +1,71 @@
+{% extends 'admininterface/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!--**********************************
+        Content body start
+    ***********************************-->
+    <div id='main_div' class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
+            <div class="row page-titles mx-0">
+                <div class="col-sm-6 p-md-0">
+                    <div class="welcome-text">
+                        <h4>Execute Query</h4>
+                        <p class="mb-0">External Query to Legacy Database</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                    <ol class="breadcrumb">
+                        
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="container" role="document">
+                <div class="modal-content">
+                    <form id="db_form" action = "" method = "POST">
+                        {% csrf_token %}
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Query Window</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <textarea type="text" rows='3' cols='200' id="query" name="query" style="background-color: #227088;
+                                color: #f4eded;
+                                font-family: sans-serif;
+                                font-size: 20px;
+                                height: 300px;"></textarea>
+                                <input value="Submit Query" type="button" class="btn btn-primary" id="queryBtn" onclick="" style="margin-left: 50%;
+                                margin-right: 50%;
+                                margin-top: 10px;
+                                margin-bottom: 10px;">
+                            </div>
+                            <div class="row">
+                                <pre id='queryoutput' style="border: 1px solid #ccc; background-color: #e8e3e3; padding: 9.5px; border-radius: 4px; height: 400px;
+                                width: 100%;font-size: 114.5%;" id="stdout" ><table></table></pre>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+      
+            
+         
+        </div>
+
+    </div>
+    <!--**********************************
+        Content body end
+    ***********************************-->
+  
+{% endblock %}
+
+{% block scripts %}
+
+
+    
+{% endblock %}

@@ -1,0 +1,460 @@
+
+@media (min-width: 1440px) {
+    .container{
+            max-width: 1300px;
+    }
+    .comingSoon {
+        font-size: 2.31rem;
+    }
+    .headData h2{
+        font-size: 3.75rem
+    }
+    .digiHeding h3{
+        font-size: 3.31rem;
+    }
+    .digiHeding strong{
+        font-size: 1.62rem;
+    }
+    .digitalHealth li{
+        font-size: 1.37rem;
+    }
+    .sectionHeding h3 {
+        font-size: 2.62rem;
+    }
+    .whoList li{
+        font-size: 1.37rem;
+    }
+    .secList li {
+        font-size: 1.938rem;}
+        .listIcon {
+            min-width: 4.937rem;
+            height: 4.937rem;
+            background-size: 1.938rem;
+        }
+    .secfive p{
+            font-size: 24px;
+    }
+    .iconOne{
+        width: 24px;
+        height: 1.938rem;
+    }
+    .iconTwo {
+        height: 32px;
+        width: 1.938rem;
+    }
+    .iconThree {
+    width: 30px;
+    height: 25px;
+    }
+    .iconFour{
+        width: 77px;
+        background-size: 30px;
+    }
+    }
+  
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+    .resContainer{
+        max-width: 1635px;
+    }
+    .headerImg{
+        margin-bottom: 0.75rem;
+        position: relative;
+    }
+    .headSection {
+        border-bottom-right-radius: 56rem;
+    }
+    .headerImg img{
+        width: 100%;
+    }
+    .headData h2 {
+        font-size: 5.25rem;
+    }
+    .comingSoon {
+        font-size: 2.31rem;
+    }
+    .headData {
+        margin-top: 1.5rem;
+    }
+    .jvText {
+        font-size: 1.81rem;
+    }
+    .digiHeding h3 {
+        font-size: 65px;}
+    .digiHeding strong{
+            font-size: 36px;
+        }
+    .digitalHealth li{
+        font-size: 30px;
+    }
+    .tickIcon{
+        width: 27px;
+    height: 27px;
+    }
+    .sectionHeding h3{
+        font-size: 55px;
+    }
+    .whoList li{
+        font-size: 30px;
+    }
+    .secList li{
+        font-size: 39px;
+        margin-bottom: 54px;
+    }
+    .listIcon {
+        min-width: 4.937rem;
+        height: 4.937rem;
+        background-size: 1.938rem;
+    }
+    .secfive p{
+        font-size: 30px;
+    }
+    .iconOne{
+        height: 40px;
+        width: 28px;
+    }
+    .iconTwo{
+        width: 35px;
+    height: 44px;
+    }
+    .iconThree{
+    width: 39px;
+    height: 35px;
+    }
+    .iconFour{
+        background-size: 34px;
+    width: 88px;
+    }
+    .form-control{
+        height: calc(2em + .75rem + 2px);
+    }
+    .footerText h3{
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 1024px){
+    .headData h2{
+        font-size: 41px;
+    }
+    
+.secList li {
+    font-size: 22px;
+}
+    .iconFour{
+        width: 40px;
+    }
+    .footerText h3{
+        font-size: 31px;
+    }
+}
+
+
+@media (max-width: 1023px){
+    .spaceDiv{
+        display: none;
+    }
+    .headData h2 {
+        font-size: 30px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    }
+    .comingSoon{
+        font-size: 20px;
+    }
+    .jvText {
+        font-size: 14px;
+    }
+    .headerImg {
+        position: inherit;
+        right: 0;
+    }
+    .headSection {
+        margin-right: 0;
+        border-bottom-right-radius: 0;
+    }
+    .digiHeding h3 {
+        font-size: 34px;
+    }
+    .digitalHealth li{
+        font-size: 16px;
+    }
+    .tickIcon{
+        min-width: 21px;
+        height: 21px;
+    }
+    .sectionHeding h3 {
+        font-size: 23px;
+    }
+    .whoImage {
+        width: 90%;
+    }
+    .listIcon{
+        background-size: 16px;
+    min-width: 40px;
+    height: 40px;
+    width: 40px;
+    margin-right: 25px;
+    }
+    .secList li{
+        margin-bottom: 21px;
+        font-size: 15px;
+    }
+    .secfive p{
+        font-size: 12px
+    }
+    .iconOne{
+        height: 19px;
+        width: 16px;
+    }
+    .iconTwo{
+        width: 19px;
+        height: 22px;
+    }
+    .iconThree {
+        width: 28px;
+        height: 22px;
+    }
+    .iconFour {
+        background-size: 21px;
+        width: 64px;
+    }
+    .footerSec {
+        border-top-left-radius: 0;
+    }
+    .footerText h3 {
+        font-size: 22px;
+    }
+    .resGrid{
+        width: 29%;
+    position: relative;
+    right: 63px;
+    top: 43px;
+    }
+    .footerImg {
+        top: -192px;
+    }
+}
+@media(max-width : 768px) {
+    .hideDive{
+        display: none;
+    }
+}
+@media(max-width : 540px){
+    .footerSec {
+        margin-top: 108px;
+    }
+    .diagnosisImg {
+        margin-top: 20px
+    }
+    .comingSoon {
+        font-size: 16px;
+    }
+    .secFive {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    .hideDive{
+        display: none;
+    }
+    .headerLogoImg {
+        width: 60%;
+    }
+    .gridImg{
+        position: absolute;
+        bottom: -243px;
+        left: 0;
+    }
+    .headerImg img {
+        bottom: -15px;
+        width: 50%;
+        left: 213px;
+        position: relative;
+    }
+    .digiImage {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .whoImage {
+        width: 65%;
+    }
+    .secList {
+        margin-top: 36px;
+    }
+    .centerImg{
+        text-align: center;
+    }
+    .homePage {
+        margin-top: 0;
+    }
+    .digiHeding{
+        margin-top: 19px !important;
+    }
+    .resGrid {
+        width: 43px;
+        position: absolute;
+        right: 124px;
+        top: -240px;
+    }
+    .footerImg {
+        position: absolute;
+        top: -362px;
+    right: 23px;
+        width: 21%;
+    }
+    .secBackground{
+        padding: 0 !important;
+    }
+    .healthService{
+        margin-top: 0 !important;
+    }
+    .iconOne {
+        margin-right: 21px !important;
+        height: 22px;
+        width: 16px;
+    }
+    .iconTwo {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px !important;
+    }
+    .iconThree {
+        margin-right: 16px !important;
+        width: 24px;
+        height: 22px;
+    }
+    .iconFour {
+        background-size: 21px;
+        width: 39px;
+    }
+}
+@media (max-width : 414px){
+    .footerSec {
+        margin-top: 75px;
+    }
+    .iconsHead{
+        margin-right:0 !important ;
+    }
+    .headderIcons{
+        display:block !important;
+    }
+    .digiHeding h3 {
+        font-size: 25px;
+    }
+    .digiHeding strong {
+        font-size: 14px;
+    }
+    .digitalHealth li {
+        font-size: 13px;
+    }
+    .whoList li{
+        font-size: 14px;
+    }
+    .listIcon {
+        background-size: 14px;
+        min-width: 35px;
+        height: 35px;
+        width: 35px;
+    }
+    .digiHeding{
+        padding: 0 !important;
+        padding-top: 10px !important;
+    }
+    .healthImage {
+        width: 100%;
+    }
+    .digipadding{
+        padding: 0 !important;
+    }
+    .resGrid {
+        width: 20px;
+        right: 81px;
+        top: -239px;
+    }
+    
+    .footerImg {
+        top: -300px;
+    right: 23px;
+    width: 14%;
+    }
+    .headerImg img {
+        bottom: -28px;
+        left: 185px;
+    }
+    .gridImg {
+        bottom: -194px;
+    }
+    .headData h2 {
+        font-size: 28px;
+    }
+}
+@media (max-width : 411px){
+    .headerImg img {
+        bottom: -27px;
+        width: 50%;
+        left: 191px;
+    }
+    .gridImg {
+        bottom: -213px;
+    }
+}
+@media(max-width : 375px){
+    .headerLogoImg {
+        width: 70px;
+    }
+    .headerImg img {
+        bottom: -27px;
+        left: 173px;
+    }
+    .gridImg {
+        bottom: -177px;
+    }
+    .headData h2 {
+        font-size: 27px;
+    }
+    .resGrid {
+        right: 74px;
+    }
+}
+@media (max-width: 360px){
+    .headData h2 {
+        font-size: 24px;
+    }
+    .headerImg img {
+        bottom: -28px;
+        left: 175px;
+    }
+    .gridImg {
+        bottom: -171px;
+    }
+    .resGrid {
+        width: 19px;
+    right: 73px;
+    top: -243px;
+    }
+}
+@media (max-width : 320px) {
+    .footerText h3 {
+        font-size: 20px;
+    }
+    .footerSec {
+        margin-top: 62px;
+    }
+    .resGrid {
+        width: 18px;
+    right: 69px;
+    top: -247px;
+    }
+    .footerImg {
+        top: -289px;
+        right: 23px;
+        width: 14%;
+    }
+    .headerImg img {
+        bottom: -28px;
+        left: 152px;
+    }
+}

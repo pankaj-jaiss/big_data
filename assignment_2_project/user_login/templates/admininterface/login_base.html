@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Focus - Bootstrap Admin Dashboard </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <style type="text/css">
+    .loginMain{
+      background-image: url("{%static 'images/loginbackground.jpg' %}");
+      /* background-repeat: no-repeat; background-size: auto;    */
+      background-position: center;
+      background-size: cover;
+    }
+
+    .auth-form
+    {
+      padding: 0px 50px;
+    }
+    </style>
+
+</head>
+
+<body class="h-100">
+    {% block content %}
+
+    {% endblock %}
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="{% static 'vendor/global/global.min.js' %}"></script>
+    <script src="{% static 'js/quixnav-init.js' %}"></script>
+    <script src="{% static 'js/custom.min.js' %}"></script>
+
+</body>
+
+</html>
