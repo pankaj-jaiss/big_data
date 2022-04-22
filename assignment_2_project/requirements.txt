@@ -1,0 +1,10 @@
+asgiref==3.5.0
+cx-Oracle==8.3.0
+Django==4.0.4
+djangorestframework==3.13.1
+greenlet==1.1.2
+PyMySQL==1.0.2
+pytz==2022.1
+simplejson==3.17.6
+SQLAlchemy==1.4.35
+sqlparse==0.4.2
