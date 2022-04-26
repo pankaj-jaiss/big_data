@@ -28,6 +28,7 @@ urlpatterns = [
     path('logout/',views.user_logout,name='logout'),
     path('migration2/',views.migration2_page,name='migration2'),
     path('all_table/',views.get_table_names,name='all_table'),
+    path('proceed/',views.proceed, name='proceed'),
 
 
 
