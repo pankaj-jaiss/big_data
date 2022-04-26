@@ -69,40 +69,38 @@
         
 
 
-
         <div class="container" role="document">
             <div class="modal-content">
                 <form id="confirm_form">
-                    
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-6">
                                 <h3>Source Details</h3>
                                 <div class="form-group">
                                     <label for="f_db_source">DB SOURCE</label>
-                                    <input id="f_db_source" class="form-control" type="text" name="db_source" list="source_db_list" value='' disabled>
+                                    <input id="f_db_source" class="form-control" type="text" name="db_source" list="source_db_list" value='{{form_data.source}}' disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="f_db_host">DB HOST</label>
-                                    <input id="f_db_host" class="form-control" type="text" name="db_host" value='' disabled>
+                                    <input id="f_db_host" class="form-control" type="text" name="db_host" value={{form_data.host}} disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="f_db_user">DB USER</label>
-                                    <input id="f_db_user" class="form-control" type="text" name="db_user" value="" disabled>
+                                    <input id="f_db_user" class="form-control" type="text" name="db_user" value={{form_data.user}} disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="f_db_port">DB PORT</label>
-                                    <input id="f_db_port" class="form-control" type="text" name="db_port" value="" disabled>
+                                    <input id="f_db_port" class="form-control" type="text" name="db_port" value={{form_data.port}} disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="f_src_database">Source Database</label>
-                                    <input id="f_src_database" class="form-control" type="text" name="db" value="" disabled>
+                                    <input id="f_src_database" class="form-control" type="text" name="db" value={{database_name}} disabled>
                                 </div>
                                 <div class="form-group">
                                     <label for="f_src_tables">Source Tables</label>
-                                    
-                                    <li for="f_src_tables" style="list-style-type: disc; font-size: 16px; font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                                    </li>
+                                    {%for table in table_list %}
+                                    <li for="f_src_tables" style="list-style-type: disc; font-size: 16px; font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{table}}</li>
+                                    {% endfor %}
                                     
                                 </div>
                                 
@@ -112,11 +110,11 @@
                                     <h3>Destination Details</h3>
                                     <div class="form-group">
                                         <label for="dest_db">Destination Database</label>
-                                        <input id="dest_db" class="form-control" type="text" name="dest_db" value="" disabled>
+                                        <input id="dest_db" class="form-control" type="text" name="dest_db" value="HDFS" disabled>
                                     </div>
                                     <div class="form-group">
                                         <label for="dest_loc">Target Location</label>
-                                        <input id="dest_loc" class="form-control" type="text" name="dest_loc" value="" disabled>
+                                        <input id="dest_loc" class="form-control" type="text" name="dest_loc" value={{host}} disabled>
                                     </div>
                                 </div>
                             </div>

@@ -29,7 +29,7 @@
 
         <div class="container" role="document">
             <div class="modal-content">
-                <form action ="" method = "POST">
+                <form action ="{%  url 'proceed' %}" method = "POST">
                     {% csrf_token %}
                     <div class="modal-body">
                         <div class="row">
@@ -67,7 +67,7 @@
                     </div>
                        
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Proceed</button>
+                      <button type="submit" id = "proceed_button" class="btn btn-primary">Proceed</button>
                     </div>
                 </form>
                 
@@ -115,65 +115,7 @@
 <!-- JQuery started from here <--------------------------- -->
 
 <script src="user_login\static\js\jquery.js"></script> 
-<!-- <script>
-    // let selectdb = $('#selectdb').find(":selected").text();
-    $('#selectdb').change(function() {
-    //Use $option (with the "$") to see that the variable is a jQuery object
-    var $option = $(this).find('option:selected');
-    //Added with the EDIT
-    var value = $option.val();//to get content of "value" attrib
-    var text = $option.text();//to get <option>Text</option> content
-    // alert(value)
-    console.log(value,text);
-    // alert(value);
-    let hiddenValue = $('#hiddenid').val()
-    let txt = "";
-    // let obj = Array.from(hiddenValue)
-    hiddenValue =hiddenValue.slice(1, -1).split(",");
-    // hiddenValue = hiddenValue.split(",");
-    hiddenValue.forEach(myFunction);
 
-    // let length =  hiddenValue.length;
-    // alert(typeof hiddenValue)
-    let hiddenValue2 = $('#hiddenid2').val()
-    //  hiddenValue2 = hiddenValue2
-    //  Object.values(hiddenValue2).forEach(myFunction);
-    // hiddenValue2='"'+hiddenValue2+'"'
-    // const obj = JSON.parse(JSON.stringify(hiddenValue2));
-    var p = {
-    "p1": "value1",
-    "p2": "value2",
-    "p3": "value3"
-};
-
-for (var key in p) {
-    if (p.hasOwnProperty(key)) {
-        // console.log(key + " -> " + p[key]);
-    }
-}
-console.log(typeof hiddenValue2);
-function myFunction(value, index, obj) {
-        // txt += value;
-        // console.log([hiddenValue[index]]);
-    }
-
-
-
-// let a= Object.keys(hiddenValue2).map((item) => console.log(item))
-
-// console.log( hiddenValue2);
-// Object.entries(obj).forEach(([key, value]) => console.log(`${value}`));
-    // console.log('['+hiddenValue2+']');
-    // let length2 =  hiddenValue2.length;
-    // alert(length2)
-    // alert(hiddenValue2)
-    html = '<option value="'+'value'+'" selected="selected">'+'text'+'</option>';
-    $('#'+'selecttables').append(html);
-    html = ' '
-    });
-    
-
-</script> -->
 <script>
     $(document).ready(function(){
         $('select#selectdb').change(function(){
@@ -199,10 +141,35 @@ function myFunction(value, index, obj) {
 
 
                     };
-                }
+                                   }
             });
         });
     });
+
+    
+
+//     $("#proceed_button").click(function(e) {
+//     e.preventDefault();
+
+//     let csr = $("input[name=csrfmiddlewaretoken").val();
+//     form_data = {
+                    
+//                     csrfmiddlewaretoken: csr,
+    
+//                 };
+//     console.log('proceed button is clicked ...');
+//     $.ajax({
+//         type: "POST",
+//         url: "{% url 'proceed' %}",
+//         data: form_data,
+//         success: function(result) {
+//             console.log('ok');
+//         },
+//         error: function(result) {
+//             console.log('error');
+//         }
+//     });
+// });    
 </script>
 
 {% endblock %}
